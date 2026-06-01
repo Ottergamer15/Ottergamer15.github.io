@@ -1,0 +1,14 @@
+npm install jss jss-preset-default
+import jss from 'jss'
+import preset from 'jss-preset-default'
+
+jss.setup(preset())
+
+const styles = {
+  myButton: {
+    color: 'blue',
+    padding: '10px'
+  }
+}
+
+const { classes } = jss.createStyleSheet(styles).attach()
